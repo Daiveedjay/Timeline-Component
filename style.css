@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --clr-purple: #d434fe;
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  padding: 1.2rem 0;
+}
+
+.timeline-section {
+  padding-block: 7rem;
+  position: relative;
+}
+
+.Timeline__header {
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.Timeline__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.Timeline__content::after {
+  background-color: var(--clr-purple);
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 0.4rem;
+  height: 97%;
+  z-index: -5;
+}
+
+.Timeline__item {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: 5rem 0;
+  margin: clamp(2rem, 2vh, 5rem) 0;
+  margin: 5rem 0;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.Timeline__text,
+.Timeline__date {
+  width: 50%;
+}
+
+.Timeline__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.Timeline__item:nth-child(even) .Timeline__date {
+  text-align: right;
+  padding-right: 8.3rem;
+}
+
+.Timeline__item:nth-child(even) .Timeline__text {
+  padding-left: 8.3rem;
+}
+.Timeline__item:nth-child(odd) .Timeline__text {
+  text-align: right;
+  align-items: flex-end;
+  padding-right: 8.3rem;
+}
+.Timeline__item:nth-child(odd) .Timeline__date {
+  padding-left: 8.3rem;
+}
+
+.circle {
+  position: absolute;
+  background: var(--clr-purple);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 6.8rem;
+  width: 100%;
+  aspect-ratio: 1/ 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  font-size: 1.6rem;
+}
